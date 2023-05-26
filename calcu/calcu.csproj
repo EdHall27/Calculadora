@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\DigitaNumero.cs" />
+    <Compile Include="Entities\Operacao.cs" />
+    <Compile Include="Entities\Multiplicacao.cs" />
+    <Compile Include="Entities\Divisao.cs" />
+    <Compile Include="Entities\Subtracao.cs" />
     <Compile Include="Entities\Soma.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

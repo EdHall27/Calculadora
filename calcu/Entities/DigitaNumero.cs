@@ -8,7 +8,8 @@ namespace calcu.Entities
 {
     internal class DigitaNumero
     {
-        public (int,int,char) Digita()
+        Operacao operacao = new Operacao();
+        public void Digita()
         {
            
             Console.WriteLine("Digite os numeros que deseja calcular");
@@ -25,11 +26,11 @@ namespace calcu.Entities
                                     "* igual multiplicação \n" +
                                     " / igual divisão");
             char opera = char.Parse(Console.ReadLine());
-
-            return (numb,numb2,opera);
+            operacao.OperacaoEscolha(numb,numb2,opera);
+            Console.Clear();
         }
 
-        public (int,char) DigitaUmNumero()
+        public void DigitaUmNumero()
         {
             Console.WriteLine("Digite os numeros que deseja calcular");
 
@@ -42,8 +43,7 @@ namespace calcu.Entities
                         "* igual multiplicação \n" +
                         " / igual divisão");
             char opera = char.Parse(Console.ReadLine());
-
-            return (numb, opera);
+            Console.Clear();
         }
     }
 }
