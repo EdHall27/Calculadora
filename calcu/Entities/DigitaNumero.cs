@@ -9,16 +9,18 @@ namespace calcu.Entities
     internal class DigitaNumero
     {
         Operacao operacao = new Operacao();
+        Operacao.Parametros parametros = new Operacao.Parametros();
+        
         public void Digita()
         {
            
             Console.WriteLine("Digite os numeros que deseja calcular");
 
             Console.Write("Digite o primeiro numero: ");
-            int numb = int.Parse(Console.ReadLine());
+            float numb = int.Parse(Console.ReadLine());
 
             Console.Write("Digite o segundo numero: ");
-            int numb2 = int.Parse(Console.ReadLine());
+            float numb2 = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Escolha a operação que deseja: \n " +
                                     "+ igual soma \n " +
@@ -26,24 +28,26 @@ namespace calcu.Entities
                                     "* igual multiplicação \n" +
                                     " / igual divisão");
             char opera = char.Parse(Console.ReadLine());
-            operacao.OperacaoEscolha(numb,numb2,opera);
-            Console.Clear();
+            parametros = new Operacao.Parametros(numb,numb2,opera);
+            operacao.OperacaoEscolha(parametros);
         }
 
-        public void DigitaUmNumero()
+        public void DigitaUmNumero(float resul)
         {
             Console.WriteLine("Digite os numeros que deseja calcular");
 
             Console.Write("Digite o primeiro numero: ");
-            int numb = int.Parse(Console.ReadLine());
-
+            float numb = int.Parse(Console.ReadLine());
+            
             Console.WriteLine("Escolha a operação que deseja: \n " +
                         "+ igual soma \n " +
                         "- igual subtração \n " +
                         "* igual multiplicação \n" +
                         " / igual divisão");
             char opera = char.Parse(Console.ReadLine());
-            Console.Clear();
+
+            parametros = new Operacao.Parametros(numb,opera,resul);
+            operacao.OperacaoEscolhaUmNumero(parametros);
         }
     }
 }

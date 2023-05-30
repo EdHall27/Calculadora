@@ -8,23 +8,23 @@ namespace calcu.Entities
 {
     internal class Soma
     {
-        public float Number1 { get; set; }
+        /*public float Number1 { get; set; }
         public float Number2 { get; set; }
 
         public Soma(float number1, float number2)
         {
             Number1 = number1;
             Number2 = number2;
-        }
+        }*/
 
         public float Somar(float num1, float num2)
         {
             return num1 + num2;
         }
 
-        public float SomarResultado(float num1, float num2,float result)
+        public float SomarResultado(float num1,float result)
         {
-            return result + Somar(num1,num2);
+            return result + num1;
         }
     }
 }

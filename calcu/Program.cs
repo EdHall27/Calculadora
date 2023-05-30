@@ -13,9 +13,6 @@ namespace calcu
         {
             DigitaNumero digitaNumero = new DigitaNumero();
             digitaNumero.Digita();
-
-            Operacao operacao = new Operacao();
-
         }
     }
 }
